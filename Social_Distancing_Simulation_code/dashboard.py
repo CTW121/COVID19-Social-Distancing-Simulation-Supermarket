@@ -604,6 +604,7 @@ app.layout = html.Div([
     Input('convertImage', 'submit_n_clicks'),
 )
 def convertImage(image01_type, image02_type, submit_n_clicks):
+    # Define paths and initial settings
     downloads_path = str(Path.home() / "Downloads")
     cwd = os.getcwd()
 
@@ -613,6 +614,7 @@ def convertImage(image01_type, image02_type, submit_n_clicks):
     #width_px = 900      # pixels
     #height_px = 900     # pixels
 
+    # Define file names based on selected image types
     # for supermarket layout 01
     if (image01_type == 'png'):
         file_name_01 = 'supermarket01.png'
@@ -639,16 +641,19 @@ def convertImage(image01_type, image02_type, submit_n_clicks):
 
     
     try:
+        # Open the selected images
         img01 = Image.open(file_name_01)
         img02 = Image.open(file_name_02)
     except:
-        print("One of the image files do not exist (e.g. 01.png, 0.2.jpg, etc.).")
+        # Handle the case where one of the image files does not exist
+        print("One of the image files do not exist (e.g. 01.png, 0.2.jpg, etc.).") # Handle the error accordingly
         #return None
 
     if (submit_n_clicks > 0):
         cwd = os.getcwd()
         print("current directory: ", cwd)
 
+        # Convert images to PBM format, resize, and save
         img_pbm_01 = img01.convert('1')
         img_pbm_01_resize = img_pbm_01.resize((width_px, height_px))
         img_pbm_01_resize.save('supermarket01.pbm')
