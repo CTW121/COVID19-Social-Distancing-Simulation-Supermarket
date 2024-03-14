@@ -1,0 +1,1 @@
+![COVID Social Distancing Simulation Dashboard](https://github.com/CTW121/COVID19-Social-Distancing-Simulation-Supermarket/blob/master/images/dashboard.PNG)
