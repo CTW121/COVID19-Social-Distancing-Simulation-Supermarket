@@ -7,6 +7,69 @@ class Customer:
 
 
     def __init__(self, x,y, PlumeConcInc, PlumeConcCont, infected=0, probSpreadPlume=PROBSPREADPLUME):
+        """
+        Initialize an individual agent in the simulation.
+
+        Parameters:
+        -----------
+        x: float
+            Initial x-coordinate position of the agent.
+        y: float
+            Initial y-coordinate position of the agent.
+        PlumeConcInc: float
+            Incremental value of plume concentration.
+        PlumeConcCont: float
+            Continuous value of plume concentration.
+        infected: int, optional
+            Boolean indicating whether the agent is infected (default is 0).
+        probSpreadPlume: float, optional
+            Probability of spreading plume (default is PROBSPREADPLUME).
+
+        Attributes:
+        -----------
+        x: float
+            Initial x-coordinate position of the agent.
+        y: float
+            Initial y-coordinate position of the agent.
+        infected: int
+            Boolean indicating whether the agent is infected.
+        shoppingList: list
+            List of points to visit.
+        path: None
+            Path of the agent (initialized as None).
+        probSpreadPlume: float
+            Probability of spreading plume.
+        exposure: int
+            Exposure level of the agent.
+        exposureTime: int
+            Total exposure time of the agent.
+        exposureTimeThres: int
+            Threshold exposure time of the agent.
+        exposureTimeThresLevel01: int
+            Exposure time threshold level 01 of the agent.
+        exposureTimeThresLevel02: int
+            Exposure time threshold level 02 of the agent.
+        exposureTimeThresLevel03: int
+            Exposure time threshold level 03 of the agent.
+        exposureTimeThresLevel04: int
+            Exposure time threshold level 04 of the agent.
+        exposureTimeThresLevel05: int
+            Exposure time threshold level 05 of the agent.
+        timeInStore: int
+            Time spent by the agent in the store.
+        initItemsList: None
+            Initial items list of the agent (initialized as None).
+        cashierWaitingTime: None
+            Waiting time at the cashier (initialized as None).
+        waitingTime: int
+            Total waiting time of the agent.
+        headingForExit: int
+            Indication of whether the agent is heading for exit.
+        PLUMECONCINC: float
+            Incremental value of plume concentration.
+        PLUMECONCCONT: float
+            Continuous value of plume concentration.
+    """
         self.x =x ## initial position
         self.y =y  
         self.infected=infected ## int boolean
